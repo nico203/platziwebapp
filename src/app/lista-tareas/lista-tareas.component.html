@@ -1,0 +1,13 @@
+<div class="row column expanded">
+    <ul class="list-group">
+        <li class="list-group-item"
+            *ngFor="let tarea of tareas | filtrarTareas: estadoTareas"
+            (click)="verTarea(tarea)">
+            <span class="item-label">{{tarea.titulo}}</span>
+            <button type="button" class="button alert"
+                    (click)="borrarTarea(tarea)">
+                    <i class="fas fa-trash"></i>
+            </button>
+        </li>
+    </ul>
+</div>

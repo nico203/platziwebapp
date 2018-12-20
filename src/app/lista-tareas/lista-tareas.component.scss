@@ -1,0 +1,84 @@
+@import '~foundation-sites/scss/foundation';
+
+$list-group-background: $white;
+$list-group-active-background: $primary-color;
+$list-group-hover-background: $light-gray;
+$list-group-disabled-background: $white;
+$list-group-font-color: $body-font-color;
+$list-group-font-disabled-color: $dark-gray;
+$list-group-font-active-color: $white;
+$list-group-border: 1px solid $light-gray;
+$list-group-active-border: 1px solid $primary-color;
+$list-group-shadow: none;
+$list-group-border-radius: $global-radius;
+$list-group-padding: $global-padding;
+$list-group-margin: $global-margin;
+
+.list-group {
+    margin: 0;
+    margin-bottom: $list-group-margin;
+    border: $list-group-border;
+    border-radius: $list-group-border-radius;
+    background: $list-group-background;
+    box-shadow: $list-group-shadow;
+    overflow: hidden;
+    color: $list-group-font-color;
+
+    & > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+.list-group-item {
+    display: flex;
+    border-bottom: $list-group-border;
+    
+    .item-label {
+        cursor: pointer;
+        flex: 1 1 0px;
+        padding: $list-group-padding;
+    }
+    
+    .button {
+        flex: 0 0 auto;
+        padding: $list-group-padding;
+        margin: 0;
+    }
+    
+    & > :last-child {
+        margin-bottom: 0;
+        border-bottom: none;
+    }
+    
+    &.active {
+        .item-label {
+            color: $list-group-font-active-color;
+            background-color: $list-group-active-background;
+            border-color: $list-group-active-border;
+        }
+    }
+    
+    &:hover, &:focus {
+        .item-label {
+            background-color: $list-group-hover-background;
+        }
+        
+        &.active {
+            .item-label { 
+                background-color: $list-group-active-background;
+            }
+        }
+    }
+    
+    &.disabled,
+    &[disabled] {
+        &,
+        &:hover, &:focus {
+            .item-label { 
+                color: $list-group-font-disabled-color;
+                cursor: not-allowed;
+                background-color: $list-group-disabled-background;
+            }
+        }
+    }
+}

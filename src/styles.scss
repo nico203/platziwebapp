@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+$light-gray: #e6e6e6;
+$medium-gray: #cacaca;
+$dark-gray: #8a8a8a;
+$black: #0a0a0a;
+$white: #fefefe;
+
+//GENERAL IMPORTS AND INCLUDES
+@import '~foundation-sites/scss/foundation';
+@include foundation-everything(true);
+@include foundation-flex-grid;
+
+/*// Motion-ui
+@import '~motion-ui/motion-ui';
+@include motion-ui-transitions;
+@include motion-ui-animations;*/
+
+
+@import './app/modules/navigation/navigation.module';
+@import './app/modules/top-bar/top-bar.module';
+
+.root-component {
+    padding-top: 15px;
+    display: block;
+    
+}

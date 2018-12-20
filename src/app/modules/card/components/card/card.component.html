@@ -1,0 +1,15 @@
+<div class="card" [ngClass]="{'hided':hide, 'hide':closed}">
+    <div class="card-divider" 
+         [ngClass]="{'minimizable':minimizable}"
+         (click)="toggle()">
+        <button (click)="close()"
+            *ngIf="closeable"
+            class="close-button" type="button">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        {{title}}
+    </div>
+    <div class="card-section" [hidden]="minimized">
+        <ng-content></ng-content>
+    </div>
+</div>

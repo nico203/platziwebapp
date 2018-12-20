@@ -1,0 +1,5 @@
+<li *ngFor="let item of items">
+    <a *ngIf="!item.route" href="#">{{item.name}}</a>
+    <a *ngIf="item.route" routerLink="{{item.route.path}}">{{item.name}}</a>
+    <ul class="vertical menu nested navigation-item" [items]="item.items" *ngIf="item.items"></ul>
+</li>

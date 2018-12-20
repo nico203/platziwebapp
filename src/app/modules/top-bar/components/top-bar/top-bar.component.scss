@@ -1,0 +1,53 @@
+.top-bar-container {
+    position: relative;
+}
+
+#top-bar {
+    position: fixed;
+    width: 100%;
+    margin: 0 !important;
+    z-index: 22;
+    
+    .hamburger-container {
+        display: block;
+        min-width: 42px;
+        min-height: 39px;
+        line-height: 1;
+        float: left;
+    }
+    
+    .plugin-container {
+        margin: 0;
+        
+        .plugin-button {
+            margin: 0;
+            margin-left: 5px;
+            margin-bottom: 1px;
+            font-size: 0.9rem;
+            flex: 0 0 auto;
+        }
+    }
+}
+
+
+@media screen and (min-width: 64em) {
+    #top-bar {
+        .hamburger-container {
+            display: none;
+        }
+    }
+}
+
+.text-title {
+    margin-left: 10px;
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 33px;
+    letter-spacing: 3.8px;
+    word-spacing: 3.4px;
+    color: #000000;
+    font-weight: 700;
+text-decoration: none;
+font-style: normal;
+font-variant: normal;
+text-transform: capitalize;
+}

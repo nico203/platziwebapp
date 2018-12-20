@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="row column expanded">
+        <card title="Lista de tareas">
+            <app-agregar-tarea></app-agregar-tarea>
+            <fieldset class="large-5 cell">
+                <legend>Estado de la tarea</legend>
+                <input type="radio" name="estado" value="todas" [(ngModel)]="estadoTarea" id="estado_todas"><label for="estado_todas">Todas</label>
+                <input type="radio" name="estado" value="por_realizar" [(ngModel)]="estadoTarea" id="estado_realizar"><label for="estado_realizar">Por Realizar</label>
+                <input type="radio" name="estado" value="realizadas" [(ngModel)]="estadoTarea" id="estado_realizadas"><label for="estado_realizadas">Realizadas</label>
+            </fieldset>
+            <app-lista-tareas [estadoTareas]="estadoTarea"></app-lista-tareas>
+        </card>
+    </div>
+</div>

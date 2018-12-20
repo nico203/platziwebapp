@@ -1,0 +1,22 @@
+<div class="reveal" data-reveal>
+    <h1>{{tarea.titulo}}</h1>
+    <hr>
+    <span class="title">Descripción</span> 
+    <button *ngIf="!editarDescripcion" type="button" class="button" (click)="editarDescripcion = true;">
+        <i class="far fa-edit"></i>
+    </button>
+    <button *ngIf="editarDescripcion" type="button" class="button alert" (click)="editarDescripcion = false;">
+        <i class="far fa-window-close"></i>
+    </button>
+    <p *ngIf="!editarDescripcion">{{tarea.descripcion || 'Sin descripcion'}}</p>
+    <textarea *ngIf="editarDescripcion" placeholder="Agrega una descripción" [(ngModel)]="tarea.descripcion"></textarea>
+
+    <input type="checkbox" [(ngModel)]="tarea.hecho" id="realizada"><label for="realizada">Realizada</label>
+    <div class="button-group">
+        <a class="button" (click)="guardar()">Guardar</a>
+        <a class="button secondary" (click)="cerrar()">Cancelar</a>
+    </div>
+    <button class="close-button" data-close aria-label="Close modal" type="button">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
