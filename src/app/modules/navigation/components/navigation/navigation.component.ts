@@ -11,7 +11,7 @@ import 'foundation-sites';
 })
 export class NavigationComponent implements OnInit, AfterViewInit, OnDestroy {
 
-    private items: ItemNav[];
+    items: ItemNav[];
     private $element: JQuery;
     private accordionMenu: FoundationSites.AccordionMenu;
     
